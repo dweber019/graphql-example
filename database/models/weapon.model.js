@@ -12,6 +12,6 @@ const weaponSchema = new Schema({
   updatedAt: { type: Date, 'default': Date.now }
 });
 
-const weaponModel = db.model('weapon', weaponSchema);
+const weaponModel = db.model('Weapon', weaponSchema);
 
 module.exports = weaponModel;
