@@ -1,4 +1,5 @@
 const db = require('../mdb.js');
+const Weapon = require('./weapon.model');
 const Schema = db.Schema;
 
 const droidSchema = new Schema({
@@ -6,7 +7,6 @@ const droidSchema = new Schema({
   lastName: { type: String, required: true, index: true },
   serialNumber: { type: String, require: true, unique: true },
   weapon: { type: db.Schema.Types.ObjectId, ref: 'Weapon' },
-  warPlaces : [{ type: db.Schema.Types.ObjectId, ref: 'WarPlace' }],
 
   createdAt: { type: Date, 'default': Date.now },
   updatedAt: { type: Date, 'default': Date.now }

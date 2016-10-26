@@ -1,4 +1,6 @@
 const db = require('../mdb.js');
+const Human = require('./human.model');
+const Droid = require('./droid.model');
 const Schema = db.Schema;
 
 const warPlacesSchema = new Schema({
